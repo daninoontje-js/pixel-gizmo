@@ -1,9 +1,9 @@
 <?php
 
 $host = "localhost";
-$dbname = "jouw_database_naam";
-$user = "jouw_gebruikersnaam";
-$pass = "jouw_wachtwoord";
+$dbname = "pixelgizmo";
+$user = "root";
+$pass = "";
 
 try {
     $conn = new PDO(

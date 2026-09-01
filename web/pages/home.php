@@ -1,3 +1,10 @@
+<?php
+require_once "includes/db.php";
+
+$stmt = $conn->query("SELECT 1");
+
+echo "Database werkt!";
+?>
 <link rel="stylesheet" href="css/home.css">
 <div class="hoi">
     <h1>Welkom op PixelGizmo</h1>
@@ -17,8 +24,6 @@
     </div>
 </div>
 
-
-
-<h1>PixelGizmo</h1>
+<h1>databse schema ofzo</h1>
 
 <script src="js/home.js"></script>
