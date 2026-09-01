@@ -4,7 +4,7 @@
   
   <div class="mij-img">
     <img src="img/ik.JPG" alt="Dani Ruiter">
-     <a href="https://github.com/daninoontje-ai/personal-pixel" target="_blank">
+     <a href="https://github.com/daninoontje-js" target="_blank">
         <img src="img/github.PNG" alt="github">
      </a>
   </div>

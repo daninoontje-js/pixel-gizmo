@@ -11,6 +11,7 @@ $pages = [
     '31' => 'pages/menu/31.php',
     'over-mij' => 'pages/over-mij.php',
     'mijn-projecten' => 'pages/mijn-projecten.php',
+    'hobbys' => 'pages/hobbys.php',
 ];
 
 if (isset($pages[$page])) {

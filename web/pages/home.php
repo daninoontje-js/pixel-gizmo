@@ -10,12 +10,15 @@
     <div id="player"></div>
     <div id="obstacle"></div>
     <div id="obstacle2"></div>
+    <div id="end">
+        <h1>Game Over</h1>
+        <h5>score:</h5><h5 id = "tel">0</h5>
+        <button onclick="location.reload()">Play Again</button>
+    </div>
 </div>
 
-<div id="end">
-    <h1>Game Over</h1>
-    <h5>score:</h5><h5 id = "tel">0</h5>
-    <button onclick="location.reload()">Play Again</button>
-</div>
+
+
+<h1>PixelGizmo</h1>
 
 <script src="js/home.js"></script>

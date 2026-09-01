@@ -17,7 +17,7 @@
             <h4>Contact</h4>
             <a>Email: daniruiter@icloud.com</a>
             <a href="https://www.linkedin.com/in/dani-ruiter-961978410" target="_blank">LinkedIn: Dani Ruiter</a>
-            <a href="https://github.com/daninoontje-ai/personal-pixel">Github: daninoontje-ai</a>
+            <a href="https://github.com/daninoontje-js">Github: daninoontje-js</a>
         </div>
 
     </div>

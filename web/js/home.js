@@ -51,6 +51,30 @@ document.addEventListener("keydown", (event) => {
     updatePlayer();
 });
 
+function beweegSpeler(posY) {
+    const schermHoogte = window.innerHeight;
+
+    if (posY < schermHoogte / 2) {
+        y += 20;
+    } else {
+        y -= 20;
+    }
+
+    if (y < 0) y = 0;
+    if (y > 445) y = 445;
+
+    updatePlayer();
+}
+
+document.addEventListener("click", (e) => {
+    beweegSpeler(e.clientY);
+});
+
+document.addEventListener("touchstart", (e) => {
+    beweegSpeler(e.touches[0].clientY);
+});
+
+
 function checkCollision() {
     const p = player.getBoundingClientRect();
     const o = obstacle.getBoundingClientRect();
@@ -82,7 +106,9 @@ function endGame() {
     obstacle.style.right = "0%";
     obstacle2.style.right = "0%";
 
-    game.style.display = "none";
+    player.style.display = "none";
+    obstacle.style.display = "none";
+    obstacle2.style.display = "none";
     end.style.display = "block";
     gameOver = true;
 }
