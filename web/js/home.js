@@ -99,9 +99,46 @@ function checkCollision() {
     }
 }
 
+async function saveScore() {
+
+    const usernameInput = document.getElementById("username");
+    const username = usernameInput.value.trim();
+
+    if (!username) {
+        alert("Vul eerst je naam in!");
+        return;
+    }
+
+    const formData = new FormData();
+
+    formData.append("username", username);
+    formData.append("score", score);
+
+    try {
+        const response = await fetch("index.php?page=home", {
+            method: "POST",
+            body: formData
+        });
+
+        if (response.ok) {
+            document.getElementById("saveScoreButton").disabled = true;
+            document.getElementById("saveScoreButton").textContent = "Score opgeslagen!";
+        }
+
+    } catch (error) {
+        console.error("Score opslaan mislukt:", error);
+    }
+}
+
 function endGame() {
+
+    if (gameOver) return;
+
+    gameOver = true;
+
     x = 0;
     y = 0;
+
     player.style.bottom = "0px";
     obstacle.style.right = "0%";
     obstacle2.style.right = "0%";
@@ -109,8 +146,8 @@ function endGame() {
     player.style.display = "none";
     obstacle.style.display = "none";
     obstacle2.style.display = "none";
+
     end.style.display = "block";
-    gameOver = true;
 }
 
 function tellen() {
@@ -120,5 +157,6 @@ function tellen() {
     teller.textContent = score;
 }
 
+document.getElementById("saveScoreButton").addEventListener("click", saveScore);
 setInterval(obstacleMove, 30);
 setInterval(tellen, 1000);
