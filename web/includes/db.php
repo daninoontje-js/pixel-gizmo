@@ -3,7 +3,7 @@
 $host = "localhost";
 $dbname = "pixelgizmo";
 $user = "root";
-$pass = "dit is een test om te kijken of gitignore werkt";
+$pass = "dit is een test om te kijken of gitignore werkt 2";
 
 try {
     $conn = new PDO(
